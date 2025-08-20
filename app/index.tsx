@@ -1,25 +1,28 @@
-import { Text, View } from "react-native";
+import { Redirect } from "expo-router";
 
 const App = () => {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-blue-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum
-        id nemo, nulla ea dicta quasi similique reiciendis iste iure sint
-        molestiae ab, nisi vel eum corrupti? Asperiores, cupiditate delectus.!
-      </Text>
-      <Text className="text-xl font-bold text-blue-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum
-        id nemo, nulla ea dicta quasi similique reiciendis iste iure sint
-        molestiae ab, nisi vel eum corrupti? Asperiores, cupiditate delectus.!
-      </Text>
-      <Text className="text-xl font-bold text-blue-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illum
-        id nemo, nulla ea dicta quasi similique reiciendis iste iure sint
-        molestiae ab, nisi vel eum corrupti? Asperiores, cupiditate delectus.!
-      </Text>
-    </View>
-  );
+  return <Redirect href="/home" />;
+
+  // return (
+  // <SafeAreaView>
+  //   <View className="mt-5 mx-2.5">
+  //     <Text className="text-5xl" style={{ fontFamily: "WorkSans-Black" }}>
+  //       Hola Mundo
+  //     </Text>
+  //     <Text className="text-4xl font-work-black text-primary">
+  //       Hola Mundo
+  //     </Text>
+  //     <Text className="text-3xl font-work-medium text-secondary-400">
+  //       Hola Mundo
+  //     </Text>
+  //     <Text className="text-2xl font-work-light text-tertiary/50">
+  //       Hola Mundo tertiary
+  //     </Text>
+  //     <Text className="text-xl">Hola Mundo</Text>
+  //     <Link href="/productos">Productos</Link>
+  //   </View>
+  // </SafeAreaView>
+  // );
 };
 
 export default App;
