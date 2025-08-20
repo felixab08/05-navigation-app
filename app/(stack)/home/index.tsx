@@ -16,6 +16,7 @@ const HomeScreen = () => {
         <CustomButton
           variant="text-only"
           color="secondary"
+          className="mt-5"
           onPress={() => router.push("/profile")}
         >
           Profile

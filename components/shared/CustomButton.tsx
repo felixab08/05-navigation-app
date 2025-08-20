@@ -37,7 +37,7 @@ const CustomButton = ({
       <Pressable
         onPress={onPress}
         onLongPress={onLongPress}
-        className={`p-3 mt-5 border-2 ${borderColor} rounded-md active:opacity-75 ${className}`}
+        className={`p-3 border-2 ${borderColor} rounded-md active:opacity-75 ${className}`}
       >
         <Text className={`text-center ${textColor} font-work-medium`}>
           {children}
