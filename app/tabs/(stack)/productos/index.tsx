@@ -15,7 +15,7 @@ const ProductsScreen = () => {
             <Text className="text-xl">{item.description}</Text>
             <View className="flex flex-row justify-between mt-2">
               <Text className="text-lg font-work-black">S/. {item.price}</Text>
-              <Link href={`/(stack)/productos/${item.id}`} asChild>
+              <Link href={`/tabs/(stack)/productos/${item.id}`} asChild>
                 <CustomButton variant="text-only" color="primary">
                   Ver detalle
                 </CustomButton>

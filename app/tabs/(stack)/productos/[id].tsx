@@ -6,7 +6,7 @@ const ProductScreen = () => {
   const { id } = useLocalSearchParams();
   const product = products.find((item) => item.id === id);
   if (!product) {
-    return <Redirect href="/(stack)/productos" />;
+    return <Redirect href="/tabs/(stack)/productos" />;
   }
 
   return (

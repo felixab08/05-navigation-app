@@ -7,7 +7,7 @@ const StackLayout = () => {
         headerStyle: { backgroundColor: "#f8f9fa" },
         headerTintColor: "#212529",
         headerTitleStyle: { fontWeight: "bold" },
-        headerShown: true,
+        headerShown: false,
         contentStyle: { backgroundColor: "#f8f9fa" },
         headerShadowVisible: false,
       }}
