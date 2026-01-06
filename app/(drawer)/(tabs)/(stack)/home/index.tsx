@@ -1,8 +1,14 @@
 import CustomButton from "@/components/shared/CustomButton";
-import { Link, router } from "expo-router";
+import { DrawerActions } from "@react-navigation/native";
+import { Link, router, useNavigation } from "expo-router";
 import { SafeAreaView, Text, View } from "react-native";
 
 const HomeScreen = () => {
+  const navigation = useNavigation()
+  const onToggleDrawer = () => {
+    navigation.dispatch(DrawerActions.toggleDrawer);
+  }
+
   return (
     <SafeAreaView>
       <View className="mt-5 mx-2.5 p-10">
@@ -10,29 +16,33 @@ const HomeScreen = () => {
           HomeScreen
         </Text>
 
-        <CustomButton color="primary" onPress={() => router.push("/drawer/tabs/productos")}>
+        <CustomButton color="primary" onPress={() => router.push("/productos")}>
           Productos
         </CustomButton>
         <CustomButton
           variant="text-only"
           color="secondary"
           className="mt-5"
-          onPress={() => router.push("/drawer/tabs/profile")}
+          onPress={() => router.push("/profile")}
         >
           Profile
         </CustomButton>
         <CustomButton
           variant="contained"
           color="tertiary"
-          onPress={() => router.push("/drawer/tabs/settings")}
+          onPress={() => router.push("/settings")}
         >
           Settings
         </CustomButton>
         {/* links */}
 
-        <Link href={"/drawer/tabs/productos"} className="mb-5 ml-5" asChild>
+        <Link href={"/productos"} className="mb-5 ml-5" asChild>
           <CustomButton color="primary">Productos</CustomButton>
         </Link>
+
+        <CustomButton onPress={onToggleDrawer}> Abrir Menu</CustomButton>
+
+
         {/* fin de link */}
         {/* <Link className="mb-5 ml-5" href="/productos">
           Products
